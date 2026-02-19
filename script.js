@@ -501,5 +501,18 @@ document.addEventListener('DOMContentLoaded', () => {
             closeMobileMenu();
         });
     });
+const langBtn = document.querySelector(".lang-btn");
+const langDropdown = document.querySelector(".lang-dropdown");
 
+langBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    langDropdown.classList.toggle("active");
 });
+
+document.addEventListener("click", function (e) {
+    if (!langDropdown.contains(e.target) && !langBtn.contains(e.target)) {
+        langDropdown.classList.remove("active");
+    }
+});
+});
+
