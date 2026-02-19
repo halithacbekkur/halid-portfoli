@@ -364,11 +364,25 @@ p {
     z-index: 2000;
 }
 
-.lang-selector:hover .lang-dropdown {
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--bg-alt);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    display: none;
+    flex-direction: column;
+    min-width: 140px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+}
+
+.lang-dropdown.active {
     display: flex;
     animation: fadeIn 0.2s ease;
 }
-
 .lang-dropdown button {
     background: transparent;
     border: none;
@@ -1007,4 +1021,5 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
